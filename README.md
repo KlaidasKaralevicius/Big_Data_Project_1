@@ -2,8 +2,8 @@
 Create program using MapReduce approach to extract data from semi-structured .txt file
 
 ### File explanation
-- **mapper1.py** is mapping function for projects 1-st and 2-nd part
-- **reducer1.py** is reduce functino for projects 1-st and 2-nd part
+- **mapper1.py** is mapping function for project 1-st and 2-nd part
+- **reducer1.py** is reduce functino for project 1-st and 2-nd part
 - **write_to_excel1.py** writes .txt output from reducer to .xlsx file
 - **run_pipeline1.sh** runs whole process + tracks time it takes to complete the job
 - **reducer1.xlsx** shows reducer1.py output data in excel document
