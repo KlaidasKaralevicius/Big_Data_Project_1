@@ -13,5 +13,7 @@ def map_function():
         for block in blocks:
             data = parse_block('{' + block + '}')
             
-
+            
+sys.stdout = open("test.txt", "w")
 map_function()
+sys.stdout.close()

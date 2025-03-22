@@ -2,10 +2,10 @@
 import sys
 from collections import defaultdict
 
-sys.stdout = open("reduceout3.txt", "w")
+sys.stdout = open("test.txt", "w")
 
 def reduce_function():
-    start = 0
+    return
 
 reduce_function()
 sys.stdout.close()

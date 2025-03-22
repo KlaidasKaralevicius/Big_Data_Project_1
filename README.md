@@ -19,6 +19,7 @@ Create program using MapReduce approach to extract data from semi-structured .tx
     - 32 GB RAM (3600 MHz)
     - RTX 3060 GPU
     - NVMe disk (PCIe 4.0)
+- second part (run_pipeline2.sh) took **placeholder** seconds to complete on same hardware
 
 ### Extra info
 - **run_pipeline** is script written to run on Linux (or using git bash in Windows)
