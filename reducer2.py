@@ -24,10 +24,8 @@ def reduce_function():
         # count blocks with missing key
         if geografine_zona == 'none':
             none_counts['geografine_zona'] += 1
-            continue
         if sav_diena == 'none':
             none_counts['sav_diena'] += 1
-            continue
         # count block with missing value
         if siuntu_skaicius == 'none':
             none_counts['siuntu_skaicius'] += 1

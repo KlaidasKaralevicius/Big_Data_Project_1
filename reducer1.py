@@ -25,8 +25,6 @@ def reduce_function():
         # count blocks with missing key
         if marsrutas == "none":
             none_counts["marsrutas"] += 1
-            continue  
-
         # count blocks with missing values
         if siuntu_skaicius == "none":
             none_counts["siuntu_skaicius"] += 1
