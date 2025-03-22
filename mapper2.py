@@ -16,7 +16,7 @@ def map_function():
             sav_diena = data.get('sustojimo savaites diena', 'none')
             siuntu_skaicius = data.get('siuntu skaicius', 'none')
             klientu_skaicius = data.get('Sustojimo klientu skaicius', 'none')
-            # write key pair and values (key is a string of 2 values)
+            # key is a string of 2 values
             print(f"{geografine_zona},{sav_diena}\t{siuntu_skaicius},{klientu_skaicius}") 
             
 map_function()
