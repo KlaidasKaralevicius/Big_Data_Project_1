@@ -2,45 +2,43 @@
 import sys
 from collections import defaultdict
 
-sys.stdin = open("test.txt", "r")
-
 def reduce_function():
     # store value summs for each key
     area_data = defaultdict(lambda: {
-        "siuntu_skaicius": 0,
-        "klientu_skaicius": 0
+        'siuntu_skaicius': 0,
+        'klientu_skaicius': 0
     })
 
     none_counts = {
-        "geografine_zona": 0,
-        "sav_diena": 0,
-        "siuntu_skaicius": 0,
-        "klientu_skaicius": 0
+        'geografine_zona': 0,
+        'sav_diena': 0,
+        'siuntu_skaicius': 0,
+        'klientu_skaicius': 0
     }
     
     for line in sys.stdin:
         # split lines in key and value pairs
-        key, values = line.strip().split("\t")
-        geografine_zona, sav_diena = key.split(",")
-        siuntu_skaicius, klientu_skaicius = values.split(",")
+        key, values = line.strip().split('\t')
+        geografine_zona, sav_diena = key.split(',')
+        siuntu_skaicius, klientu_skaicius = values.split(',')
         # count blocks with missing key
         if geografine_zona == 'none':
             none_counts['geografine_zona'] += 1
             continue
         if sav_diena == 'none':
-            none_counts["sav_diena"] += 1
+            none_counts['sav_diena'] += 1
             continue
         # count block with missing value
         if siuntu_skaicius == 'none':
-            none_counts["siuntu_skaicius"] += 1
+            none_counts['siuntu_skaicius'] += 1
         if klientu_skaicius == 'none':
-            none_counts["klientu_skaicius"] += 1
+            none_counts['klientu_skaicius'] += 1
         # skip calculation if there is missing values
-        if "none" in (siuntu_skaicius, klientu_skaicius):
+        if 'none' in (siuntu_skaicius, klientu_skaicius):
             continue
         # summ values for each key pair
-        area_data[(geografine_zona, sav_diena)]["siuntu_skaicius"] += int(siuntu_skaicius)
-        area_data[(geografine_zona, sav_diena)]["klientu_skaicius"] += int(klientu_skaicius)
+        area_data[(geografine_zona, sav_diena)]['siuntu_skaicius'] += int(siuntu_skaicius)
+        area_data[(geografine_zona, sav_diena)]['klientu_skaicius'] += int(klientu_skaicius)
     # output result
     for (geografine_zona, sav_diena), data in area_data.items():
         print(f"{geografine_zona},{sav_diena}\t{data['siuntu_skaicius']},{data['klientu_skaicius']}")
@@ -48,6 +46,4 @@ def reduce_function():
     for field, count in none_counts.items():
         print(f"{field} none:{count}")
 
-sys.stdout = open("output_test.txt", "w")
 reduce_function()
-sys.stdout.close()

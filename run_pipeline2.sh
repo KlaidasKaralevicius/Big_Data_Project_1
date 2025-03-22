@@ -4,4 +4,4 @@ cat duom_cut.txt | python mapper2.py | python shuffle.py | python reducer2.py > 
 end_time=$(date +%s)
 execution_time=$((end_time - start_time))
 echo "Execution time: $execution_time seconds"
-python write_to_excel2.py
+#python write_to_excel2.py
