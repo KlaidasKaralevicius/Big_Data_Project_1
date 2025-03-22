@@ -6,12 +6,12 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 - **reducer1.py** is reduce functino for project 1-st and 2-nd part
 - **write_to_excel1.py** writes .txt output from reducer to .xlsx file
 - **run_pipeline1.sh** runs whole process + tracks time it takes to complete the job
-- **reduce_output1.txt** outputs reducer1.py data in txt file
-- **reducer1.xlsx** shows reducer1.py output data in excel document
+- **reduce_output1_raw.txt** outputs reducer1.py data in txt file
+- **reduce_output1.xlsx** shows reducer1.py output data in excel document
 
 **shuffle.py** is common function for both parts to shuffle data
 
-**mapper2.py**, **reducer2.py**, **write_to_excel2.py**, **run_pipeline2.sh**, **reduce_output1.txt** and **reducer2.xlsx** is same as previous files, but for 3-d part
+**mapper2.py**, **reducer2.py**, **write_to_excel2.py**, **run_pipeline2.sh**, **reduce_output2_raw.txt** and **reduce_output2.xlsx** is same as previous files, but for 3-d part
 
 ### Timing
 first part (run_pipeline1.sh) took **28** seconds to complete on:

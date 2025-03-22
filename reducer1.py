@@ -54,6 +54,4 @@ def reduce_function():
     for field, count in none_counts.items():
         print(f"{field} none:{count}")
 
-# sys.stdout = open("test.txt", "w")
 reduce_function()
-# sys.stdout.close()
