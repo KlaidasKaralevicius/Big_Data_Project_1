@@ -31,7 +31,7 @@ for line in lines:
 data_with_nr = [[i + 1] + row for i, row in enumerate(data)]
 
 # Create a DataFrame with the 'Nr' column
-df = pd.DataFrame(data_with_nr, columns=['Nr', 'zone', 'day', 'parsel', 'client'])
+df = pd.DataFrame(data_with_nr, columns=['Nr', 'Geografine zona', 'Savaites diena', 'Siuntiniu skaicius (vnt.)', 'Klientu skaicius'])
 
 # Add the missing values row
 missing_values_row = pd.DataFrame([['missing values', missing_values['geografine_zona'], missing_values['sav_diena'], missing_values['siuntu_skaicius'], missing_values['klientu_skaicius']]], columns=['Nr', 'zone', 'day', 'parsel', 'client'])

@@ -14,12 +14,12 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 **mapper2.py**, **reducer2.py**, **write_to_excel2.py**, **run_pipeline2.sh**, **reduce_output2_raw.txt** and **reduce_output2.xlsx** is same as previous files, but for 3-d part
 
 ### Timing
-- first part (run_pipeline1.sh) took **29** seconds to complete on:
+- first part (run_pipeline1.sh) took **29 seconds** to complete on:
     - 6 core AMD 5th processor (base speed 3,50 GHz)
     - 32 GB RAM (3600 MHz)
     - RTX 3060 GPU
     - NVMe disk (PCIe 4.0)
-- second part (run_pipeline2.sh) took **placeholder** seconds to complete on same hardware
+- second part (run_pipeline2.sh) took **29 seconds** aswell to complete on same hardware
 
 ### Extra info
 - **run_pipeline** is script written to run on Linux (or using git bash in Windows)
