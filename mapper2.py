@@ -12,8 +12,11 @@ def map_function():
         blocks = re.findall(r'\{\{(.*?)\}\}', line)
         for block in blocks:
             data = parse_block('{' + block + '}')
+            geografine_zona = data.get('geografine zona', 'none')
+            sav_diena = data.get('sustojimo savaites diena', 'none')
+            siuntu_skaicius = data.get('siuntu skaicius', 'none')
+            klientu_skaicius = data.get('Sustojimo klientu skaicius', 'none')
+            # write key pair and values (key is a string of 2 values)
+            print(f"{geografine_zona},{sav_diena}\t{siuntu_skaicius},{klientu_skaicius}") 
             
-            
-sys.stdout = open("test.txt", "w")
 map_function()
-sys.stdout.close()
