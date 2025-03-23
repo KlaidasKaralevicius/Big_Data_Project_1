@@ -34,7 +34,7 @@ data_with_nr = [[i + 1] + row for i, row in enumerate(data)]
 df = pd.DataFrame(data_with_nr, columns=['Nr', 'Geografine zona', 'Savaites diena', 'Siuntiniu skaicius (vnt.)', 'Klientu skaicius'])
 
 # Add the missing values row
-missing_values_row = pd.DataFrame([['missing values', missing_values['geografine_zona'], missing_values['sav_diena'], missing_values['siuntu_skaicius'], missing_values['klientu_skaicius']]], columns=['Nr', 'zone', 'day', 'parsel', 'client'])
+missing_values_row = pd.DataFrame([['missing values', missing_values['geografine_zona'], missing_values['sav_diena'], missing_values['siuntu_skaicius'], missing_values['klientu_skaicius']]], columns=['Nr', 'Geografine zona', 'Savaites diena', 'Siuntiniu skaicius (vnt.)', 'Klientu skaicius'])
 
 # Use pd.concat to append the missing values row
 df = pd.concat([df, missing_values_row], ignore_index=True)
@@ -42,10 +42,10 @@ df = pd.concat([df, missing_values_row], ignore_index=True)
 # Ensure zone names appear only once for each group of days, but keep '-' as is
 prev_zone = None
 for i in range(len(df)):
-    if df.loc[i, 'zone'] == prev_zone and df.loc[i, 'zone'] != '-':
-        df.loc[i, 'zone'] = ''
+    if df.loc[i, 'Geografine zona'] == prev_zone and df.loc[i, 'Geografine zona'] != '-':
+        df.loc[i, 'Geografine zona'] = ''
     else:
-        prev_zone = df.loc[i, 'zone']
+        prev_zone = df.loc[i, 'Geografine zona']
 
 # Write to Excel
 df.to_excel('reduce_output2.xlsx', index=False)
