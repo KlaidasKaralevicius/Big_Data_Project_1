@@ -3,10 +3,10 @@ import sys
 import re
 
 def parse_block(block):
-    # rasti visus {key=value} duotame inpute
+    # find all {key=value} in given block
     pattern = r'\{([^=]+)=([^}]+)\}'
     matches = re.findall(pattern, block)
-    # grazinti dictionary 'key':'value'
+    # return dictionary 'key':'value'
     return {key: value for key, value in matches}
 
 def map_function():
@@ -14,7 +14,7 @@ def map_function():
         # find different full blocks '{{}}'
         blocks = re.findall(r'\{\{(.*?)\}\}', line)
         for block in blocks:
-            # find data in each block - '{key':'value}'
+            # find data in each block - '{key=value}'
             data = parse_block('{' + block + '}')
             # get data, if it is missing, write 'none'
             marsrutas = data.get('marsrutas', 'none')

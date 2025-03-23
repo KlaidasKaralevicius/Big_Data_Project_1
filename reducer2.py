@@ -3,7 +3,7 @@ import sys
 from collections import defaultdict
 
 def reduce_function():
-    # store value summs for each key
+    # store value for each key pair
     area_data = defaultdict(lambda: {
         'siuntu_skaicius': 0,
         'klientu_skaicius': 0
@@ -37,16 +37,16 @@ def reduce_function():
         if klientu_skaicius == 'none':
             none_counts['klientu_skaicius'] += 1
         # convert values into integers
-        siuntu_skaicius = int(siuntu_skaicius) if siuntu_skaicius != "none" else 0
-        klientu_skaicius = int(klientu_skaicius) if klientu_skaicius != "none" else 0
+        siuntu_skaicius = int(siuntu_skaicius) if siuntu_skaicius != 'none' else 0
+        klientu_skaicius = int(klientu_skaicius) if klientu_skaicius != 'none' else 0
         # write data normally if both keys exist
-        if geografine_zona != "none" and sav_diena != "none":
-            area_data[(geografine_zona, sav_diena)]["siuntu_skaicius"] += siuntu_skaicius
-            area_data[(geografine_zona, sav_diena)]["klientu_skaicius"] += klientu_skaicius
+        if geografine_zona != 'none' and sav_diena != 'none':
+            area_data[(geografine_zona, sav_diena)]['siuntu_skaicius'] += siuntu_skaicius
+            area_data[(geografine_zona, sav_diena)]['klientu_skaicius'] += klientu_skaicius
         else:
             # if any key is missing, write data collected from missing key instances
-            missing_keys_data[(geografine_zona, sav_diena)]["siuntu_skaicius"] += siuntu_skaicius
-            missing_keys_data[(geografine_zona, sav_diena)]["klientu_skaicius"] += klientu_skaicius
+            missing_keys_data[(geografine_zona, sav_diena)]['siuntu_skaicius'] += siuntu_skaicius
+            missing_keys_data[(geografine_zona, sav_diena)]['klientu_skaicius'] += klientu_skaicius
 
     # output result of full data
     for (geografine_zona, sav_diena), data in area_data.items():
