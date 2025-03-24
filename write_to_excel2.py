@@ -51,4 +51,4 @@ def save_to_excel(output_file, area_data, none_counts):
 
 output_file = 'reduce_output2_raw.txt'
 area_data, none_counts = parse_reducer_output(output_file)
-save_to_excel(output_file, area_data, none_counts)
+save_to_excel('reduce_output2.xlsx', area_data, none_counts)
