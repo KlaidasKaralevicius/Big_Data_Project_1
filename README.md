@@ -1,7 +1,7 @@
 # Big Data Project Nr.1
 Create program using MapReduce approach to extract data from semi-structured .txt file
 
-### File explanation
+## File explanation
 - **LD1_data.zip** holds data .txt files used for the project
 - **mapper1.py** is mapping function for project 1-st and 2-nd part
 - **reducer1.py** is reduce functino for project 1-st and 2-nd part
@@ -14,14 +14,23 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 
 **mapper2.py**, **reducer2.py**, **write_to_excel2.py**, **run_pipeline2.sh**, **reduce_output2_raw.txt** and **reduce_output2.xlsx** is same as previous files, but for 3-d part
 
-### Timing
+## Timing
+### First hardware
 - first part (run_pipeline1.sh) took **29 seconds** to complete on:
+    - Windows 10 (git bash terminal)    
     - 6 core AMD 5th processor (base speed 3,50 GHz)
     - 32 GB RAM (3600 MHz)
-    - RTX 3060 GPU
+    - Nvidia RTX 3060 GPU
     - NVMe disk (PCIe 4.0)
 - second part (run_pipeline2.sh) took **29 seconds** aswell to complete on same hardware
+### Second hardware
+- first part (run_pipeline1.sh) took **9 seconds** to complete on:
+    -  Linux Mint (native bash terminal)
+    -  AMD Ryzen 5 PRO 3500U
+    -  16 GB RAM (2666 MHz)
+    -  Integrated graphics
+- second part (run_pipeline2.sh) took **8 seconds** to complete on same hardware
 
-### Extra info
-- **run_pipeline** is script written to run on Linux (or using git bash in Windows)
+## Extra info
+- **run_pipeline** is script written to run on git bash (for linux 'python' need to be changed to 'python3')
 - **write_to_excel** needs *openpyxl* which can be installed running - pip install openpyxl
