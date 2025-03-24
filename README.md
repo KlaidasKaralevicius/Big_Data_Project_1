@@ -30,6 +30,10 @@ Create program using MapReduce approach to extract data from semi-structured .tx
     -  16 GB RAM (2666 MHz)
     -  Integrated graphics
 - second part (run_pipeline2.sh) took **8 seconds** to complete on same hardware
+
+- first part took **31 seconds** to complete on:
+    - same hardware, Windows 11
+- second part took **31 seconds** aswell 
 ### P.S.
 Second hardware is far less powersull, but performs significantly faster, possible cause, OS (Linux vs Windows) have very significant impact
 
