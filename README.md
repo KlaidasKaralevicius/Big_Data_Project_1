@@ -34,5 +34,5 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 Second hardware is far less powersull, but performs significantly faster, possible cause, OS (Linux vs Windows) have very significant impact
 
 ## Extra info
-- **run_pipeline** is script written to run on git bash (for linux 'python' need to be changed to 'python3')
+- **run_pipeline** is script written to run on Windows git bash (for linux 'python' need to be changed to 'python3')
 - **write_to_excel** needs *openpyxl* which can be installed running - pip install openpyxl
