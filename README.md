@@ -18,7 +18,7 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 ### First hardware
 - first part (run_pipeline1.sh) took **29 seconds** to complete on:
     - Windows 10 (git bash terminal)    
-    - 6 core AMD 5th processor (base speed 3,50 GHz)
+    - AMD Ryzen 5 5600 (6 cores, 12 threads, base speed 3,50 GHz)
     - 32 GB RAM (3600 MHz)
     - Nvidia RTX 3060 GPU
     - NVMe disk (PCIe 4.0)
@@ -26,7 +26,7 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 ### Second hardware
 - first part (run_pipeline1.sh) took **9 seconds** to complete on:
     -  Linux Mint (native bash terminal)
-    -  AMD Ryzen 5 PRO 3500U (base speed 2,1 GHz)
+    -  AMD Ryzen 5 PRO 3500U (4 cores, 8 threads, base speed 2,1 GHz)
     -  16 GB RAM (2666 MHz)
     -  Integrated graphics
 - second part (run_pipeline2.sh) took **8 seconds** to complete on same hardware
@@ -40,3 +40,4 @@ Second hardware is far less powersull, but performs significantly faster, possib
 ## Extra info
 - **run_pipeline** is script written to run on Windows git bash (for linux 'python' need to be changed to 'python3')
 - **write_to_excel** needs *openpyxl* which can be installed running - pip install openpyxl
+- writing from text file to excel is not calculated in the completion time
