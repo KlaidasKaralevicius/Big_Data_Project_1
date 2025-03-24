@@ -26,7 +26,7 @@ Create program using MapReduce approach to extract data from semi-structured .tx
 ### Second hardware
 - first part (run_pipeline1.sh) took **9 seconds** to complete on:
     -  Linux Mint (native bash terminal)
-    -  AMD Ryzen 5 PRO 3500U
+    -  AMD Ryzen 5 PRO 3500U (base speed 2,1 GHz)
     -  16 GB RAM (2666 MHz)
     -  Integrated graphics
 - second part (run_pipeline2.sh) took **8 seconds** to complete on same hardware
