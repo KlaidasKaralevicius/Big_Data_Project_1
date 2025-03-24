@@ -78,4 +78,4 @@ def save_to_excel(output_file, routes_data, unique_zones, none_counts):
     
 output_file = 'reduce_output1_raw.txt'
 routes_data, unique_zones, none_counts = parse_reducer_output(output_file)
-save_to_excel(output_file, routes_data, unique_zones, none_counts)
+save_to_excel('reduce_output1.xlsx', routes_data, unique_zones, none_counts)
